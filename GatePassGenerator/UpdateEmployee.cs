@@ -89,7 +89,7 @@ namespace GatePassGenerator
                     !String.IsNullOrEmpty(userName))
                     {
                         Int64 number = Int64.Parse(contact);
-                        query = "update e set e.ename='" + name + "', e.hiredate='" + hireDate + "',e.contact=" + contact + ",e.gender='" + gender + "',e.eadress='" + address + "',e.city='" + city + "', e.estate='"+state+"' from employee as e inner join appUser as a on e.appuser_fk=a.appUser_pk where a.username = '"+userName+"' ";
+                        query = "update e set e.ename='" + name + "', e.hiredate='" + hireDate + "',e.contact=" + contact + ",e.gender='" + gender + "',e.eaddress='" + address + "',e.city='" + city + "', e.estate='"+state+"' from employee as e inner join appUser as a on e.appuser_fk=a.appUser_pk where a.username = '"+userName+"' ";
                         databaseOperations.setData(query, "Employee updated");
                         clearAllFields();
                     }

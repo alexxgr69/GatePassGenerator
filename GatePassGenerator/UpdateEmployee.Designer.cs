@@ -163,8 +163,9 @@ namespace GatePassGenerator
             // txtHireDate
             // 
             this.txtHireDate.CalendarFont = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.txtHireDate.CustomFormat = "";
+            this.txtHireDate.CustomFormat = "yyyy-MM-dd";
             this.txtHireDate.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.txtHireDate.Location = new System.Drawing.Point(288, 317);
             this.txtHireDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtHireDate.Name = "txtHireDate";

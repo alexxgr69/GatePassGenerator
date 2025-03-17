@@ -89,7 +89,7 @@ namespace GatePassGenerator
                         query =  "select * from appUser where username='" + userName + "' and upass = '" + password + "' and uenabled = 1";
                         ds = databaseOperations.getData(query);
 
-                        query = "insert into employee(ename,hiredate,contact,gender,eadress,city,estate,appuser_fk) values ('" + name + "','" + hireDate + "'," + contactInt + ",'" + gender + "','" + address + "','" + city + "','" + state + "'," + ds.Tables[0].Rows[0][0] + ")";
+                        query = "insert into employee(ename,hiredate,contact,gender,eaddress,city,estate,appuser_fk) values ('" + name + "','" + hireDate + "'," + contactInt + ",'" + gender + "','" + address + "','" + city + "','" + state + "'," + ds.Tables[0].Rows[0][0] + ")";
                         databaseOperations.setData(query, "Employee added successfully.");
                         clearAllFields();
                         MessageBox.Show("New employee was added succesfully.", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
