@@ -90,7 +90,7 @@ namespace GatePassGenerator
                 DateTime validToDate = DateTime.ParseExact(validTo, "dd.MM.yyyy", CultureInfo.InvariantCulture);
 
               
-                query = "insert into pass(passId, validForm,validTo,visitors_fk) values ('"+passId+"','"+validFromDate.ToString("yyyy-MM-dd")+"','"+validToDate.ToString("yyyy-MM-dd")+"', "+visitorPk+" )";
+                query = "insert into pass(passId, validFrom,validTo,visitors_fk) values ('"+passId+"','"+validFromDate.ToString("yyyy-MM-dd")+"','"+validToDate.ToString("yyyy-MM-dd")+"', "+visitorPk+" )";
                 databaseOperations.setData(query,null);
             }catch(Exception ex)
             {

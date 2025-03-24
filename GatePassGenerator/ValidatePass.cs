@@ -23,7 +23,7 @@ namespace GatePassGenerator
 
         private void ValidatePass_Load(object sender, EventArgs e)
         {
-            query = "select v.*, p.passId, p.validForm, p.validTo from visitors as v inner join pass as p on v.visitors_pk=visitors_fk";
+            query = "select v.*, p.passId, p.validFrom, p.validTo from visitors as v inner join pass as p on v.visitors_pk=visitors_fk";
             ds = databaseOperations.getData(query);
             dataGridViewVisitor.DataSource = ds.Tables[0];
 
@@ -92,8 +92,8 @@ namespace GatePassGenerator
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            query = "select v.*, p.passId, p.validForm, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.passId like '"
-                +txtSearch+"%' or v.visitorsId like '"+txtSearch.Text+"%' or v.vname like '"+txtSearch.Text+"%'";
+            query = "select v.*, p.passId, p.validFrom, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.passId like '"
+                +txtSearch+"%' or v.visitorId like '"+txtSearch.Text+"%' or v.vname like '"+txtSearch.Text+"%'";
            ds = databaseOperations.getData(query);
            dataGridViewVisitor.DataSource = ds.Tables[0];
         }

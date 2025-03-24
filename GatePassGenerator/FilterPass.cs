@@ -28,7 +28,7 @@ namespace GatePassGenerator
 
         private void FilterPass_Load(object sender, EventArgs e)
         {
-            query = "select v.*,p.passId,p.validForm,p.validTo from visitors as v inner join pass as p on v.visitors_pk=visitors_fk";
+            query = "select v.*,p.passId,p.validFrom,p.validTo from visitors as v inner join pass as p on v.visitors_pk=visitors_fk";
             ds = databaseOperations.getData(query);
             dataGridViewVisitor.DataSource = ds.Tables[0];
         }
@@ -42,11 +42,11 @@ namespace GatePassGenerator
             {
                 MessageBox.Show("Please select the filter type first","Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
             }else if("Valid From".Equals(filterType)){
-                query = "select v.*, p.passId, p.validForm, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.validForm like '%"+selectedDate+"%'";
+                query = "select v.*, p.passId, p.validFrom, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.validFrom like '%"+selectedDate+"%'";
 
             }else if("Valid To".Equals(filterType))
             {
-                query = "select v.*, p.passId, p.validForm, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.validTo like '%" + selectedDate + "%'";
+                query = "select v.*, p.passId, p.validFrom, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.validTo like '%" + selectedDate + "%'";
             }
             else
             {
@@ -69,8 +69,8 @@ namespace GatePassGenerator
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            query = "select v.*, p.passId, p.validForm, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.passId like '"
-                +txtSearch.Text+"%' or v.visitorsId like '"+txtSearch.Text+"%' or v.vname like '"+txtSearch.Text+"%'";
+            query = "select v.*, p.passId, p.validFrom, p.validTo from visitors as v inner join pass as p on v.visitors_pk=p.visitors_fk where p.passId like '"
+                +txtSearch.Text+"%' or v.visitorId like '"+txtSearch.Text+"%' or v.vname like '"+txtSearch.Text+"%'";
        
             dataGridViewVisitor.DataSource = databaseOperations.getData(query).Tables[0];
         }

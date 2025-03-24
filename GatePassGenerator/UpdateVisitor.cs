@@ -38,7 +38,7 @@ namespace GatePassGenerator
             try
             {
                 String visitorId = txtVisitor.Text;
-                query = "select * from visitors where visitorsId='" + visitorId + "'";
+                query = "select * from visitors where visitorId='" + visitorId + "'";
                 ds = databaseOperations.getData(query);
                 if (ds != null && ds.Tables[0].Rows.Count != 0)
                 {
@@ -152,7 +152,7 @@ namespace GatePassGenerator
                     {
                         Int64 number = Int64.Parse(contact);
 
-                        query = "update visitors set vname = '"+name+"',contact="+number+",gender = '"+gender+"', vadress='"+address+"',uniqueId='"+uniqueID+"' where visitorsId='"+visitorID+"'";
+                        query = "update visitors set vname = '"+name+"',contact="+number+",gender = '"+gender+"', vaddress='"+address+"',uniqueId='"+uniqueID+"' where visitorId='"+visitorID+"'";
                         databaseOperations.setData(query, "Visitor updated");
                         clearAllFields();
                     }
