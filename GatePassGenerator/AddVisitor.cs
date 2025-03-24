@@ -79,9 +79,8 @@ namespace GatePassGenerator
                        !String.IsNullOrEmpty(uniqueID))
                     {
                         Int64 contactNum = Int64.Parse(contact);
-                        query = "insert into visitors (vname,contact,gender,vadress,uniqueId,visitorsId) values('" + name + "','" + contact + "','" + gender + "','" + address + "','"+uniqueID+"','" + visitorID + "')";
-                        databaseOperations.setData(query, "Visitor added.");
-
+                        query = "insert into visitors (vname,contact,gender,vaddress,uniqueId,visitorId) values('" + name + "','" + contact + "','" + gender + "','" + address + "','" + uniqueID + "','" + visitorID + "')";
+                        databaseOperations.setData(query, "Visitor was successfully added.");
                         clearAllfields();
                     }
                     else

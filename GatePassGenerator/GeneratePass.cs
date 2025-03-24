@@ -57,7 +57,7 @@ namespace GatePassGenerator
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             String searchTxt = txtSearch.Text;
-            query = "select * from visitors where vname like '%" + searchTxt + "%' or uniqueId like '%" + searchTxt + "%' or visitorsId like '%" + searchTxt + "'";
+            query = "select * from visitors where vname like '%" + searchTxt + "%' or uniqueId like '%" + searchTxt + "%' or visitorId like '%" + searchTxt + "'";
             ds = databaseOperations.getData(query);
             dataGridViewVisitor.DataSource = ds.Tables[0];
         }
