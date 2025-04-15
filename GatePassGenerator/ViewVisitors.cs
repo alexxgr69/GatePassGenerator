@@ -43,7 +43,7 @@ namespace GatePassGenerator
         {
             try
             {
-                query = "select * from visitors where vname like '" + txtSearch.Text + "%' or visitorsId like '"+txtSearch.Text+"%'";
+                query = "select * from visitors where vname like '" + txtSearch.Text + "%' or visitorId like '"+txtSearch.Text+"%'";
                 ds = databaseOperations.getData(query);
                 dataGridViewVisitor.DataSource = ds.Tables[0];
             }catch(Exception ex)
