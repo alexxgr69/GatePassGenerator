@@ -29,6 +29,7 @@ namespace GatePassGenerator
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.employeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,11 +47,14 @@ namespace GatePassGenerator
             this.btnLogOut = new System.Windows.Forms.ToolStripMenuItem();
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.labelWelcomeText = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.employeeToolStripMenuItem,
             this.visitorToolStripMenuItem,
@@ -61,7 +65,7 @@ namespace GatePassGenerator
             this.btnExit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1351, 68);
+            this.menuStrip1.Size = new System.Drawing.Size(2026, 70);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -76,7 +80,7 @@ namespace GatePassGenerator
             this.employeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("employeeToolStripMenuItem.Image")));
             this.employeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(85, 64);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(94, 64);
             this.employeeToolStripMenuItem.Text = " ";
             // 
             // addEmployeeToolStripMenuItem
@@ -85,7 +89,7 @@ namespace GatePassGenerator
             this.addEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addEmployeeToolStripMenuItem.Image")));
             this.addEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addEmployeeToolStripMenuItem.Name = "addEmployeeToolStripMenuItem";
-            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(242, 66);
+            this.addEmployeeToolStripMenuItem.Size = new System.Drawing.Size(335, 70);
             this.addEmployeeToolStripMenuItem.Text = "Add Employee";
             this.addEmployeeToolStripMenuItem.Click += new System.EventHandler(this.addEmployeeToolStripMenuItem_Click);
             // 
@@ -95,7 +99,7 @@ namespace GatePassGenerator
             this.updateEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateEmployeeToolStripMenuItem.Image")));
             this.updateEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updateEmployeeToolStripMenuItem.Name = "updateEmployeeToolStripMenuItem";
-            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(242, 66);
+            this.updateEmployeeToolStripMenuItem.Size = new System.Drawing.Size(335, 70);
             this.updateEmployeeToolStripMenuItem.Text = "Update Employee";
             this.updateEmployeeToolStripMenuItem.Click += new System.EventHandler(this.updateEmployeeToolStripMenuItem_Click);
             // 
@@ -105,7 +109,7 @@ namespace GatePassGenerator
             this.viewAllEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewAllEmployeeToolStripMenuItem.Image")));
             this.viewAllEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewAllEmployeeToolStripMenuItem.Name = "viewAllEmployeeToolStripMenuItem";
-            this.viewAllEmployeeToolStripMenuItem.Size = new System.Drawing.Size(242, 66);
+            this.viewAllEmployeeToolStripMenuItem.Size = new System.Drawing.Size(335, 70);
             this.viewAllEmployeeToolStripMenuItem.Text = "View All Employee";
             this.viewAllEmployeeToolStripMenuItem.Click += new System.EventHandler(this.viewAllEmployeeToolStripMenuItem_Click);
             // 
@@ -115,7 +119,7 @@ namespace GatePassGenerator
             this.deleteEmployeeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteEmployeeToolStripMenuItem.Image")));
             this.deleteEmployeeToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.deleteEmployeeToolStripMenuItem.Name = "deleteEmployeeToolStripMenuItem";
-            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(242, 66);
+            this.deleteEmployeeToolStripMenuItem.Size = new System.Drawing.Size(335, 70);
             this.deleteEmployeeToolStripMenuItem.Text = "Delete Employee";
             this.deleteEmployeeToolStripMenuItem.Click += new System.EventHandler(this.deleteEmployeeToolStripMenuItem_Click);
             // 
@@ -130,7 +134,7 @@ namespace GatePassGenerator
             this.visitorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("visitorToolStripMenuItem.Image")));
             this.visitorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.visitorToolStripMenuItem.Name = "visitorToolStripMenuItem";
-            this.visitorToolStripMenuItem.Size = new System.Drawing.Size(123, 64);
+            this.visitorToolStripMenuItem.Size = new System.Drawing.Size(153, 64);
             this.visitorToolStripMenuItem.Text = "Visitor";
             // 
             // addVisitorToolStripMenuItem
@@ -138,7 +142,7 @@ namespace GatePassGenerator
             this.addVisitorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("addVisitorToolStripMenuItem.Image")));
             this.addVisitorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.addVisitorToolStripMenuItem.Name = "addVisitorToolStripMenuItem";
-            this.addVisitorToolStripMenuItem.Size = new System.Drawing.Size(224, 66);
+            this.addVisitorToolStripMenuItem.Size = new System.Drawing.Size(306, 70);
             this.addVisitorToolStripMenuItem.Text = "Add Visitor";
             this.addVisitorToolStripMenuItem.Click += new System.EventHandler(this.addVisitorToolStripMenuItem_Click);
             // 
@@ -147,7 +151,7 @@ namespace GatePassGenerator
             this.viewVisitorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("viewVisitorToolStripMenuItem.Image")));
             this.viewVisitorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.viewVisitorToolStripMenuItem.Name = "viewVisitorToolStripMenuItem";
-            this.viewVisitorToolStripMenuItem.Size = new System.Drawing.Size(224, 66);
+            this.viewVisitorToolStripMenuItem.Size = new System.Drawing.Size(306, 70);
             this.viewVisitorToolStripMenuItem.Text = "View Visitor";
             this.viewVisitorToolStripMenuItem.Click += new System.EventHandler(this.viewVisitorToolStripMenuItem_Click);
             // 
@@ -156,7 +160,7 @@ namespace GatePassGenerator
             this.updateVisitorToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("updateVisitorToolStripMenuItem.Image")));
             this.updateVisitorToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.updateVisitorToolStripMenuItem.Name = "updateVisitorToolStripMenuItem";
-            this.updateVisitorToolStripMenuItem.Size = new System.Drawing.Size(224, 66);
+            this.updateVisitorToolStripMenuItem.Size = new System.Drawing.Size(306, 70);
             this.updateVisitorToolStripMenuItem.Text = "Update Visitor";
             this.updateVisitorToolStripMenuItem.Click += new System.EventHandler(this.updateVisitorToolStripMenuItem_Click);
             // 
@@ -166,7 +170,7 @@ namespace GatePassGenerator
             this.generatePassToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("generatePassToolStripMenuItem.Image")));
             this.generatePassToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.generatePassToolStripMenuItem.Name = "generatePassToolStripMenuItem";
-            this.generatePassToolStripMenuItem.Size = new System.Drawing.Size(175, 64);
+            this.generatePassToolStripMenuItem.Size = new System.Drawing.Size(227, 64);
             this.generatePassToolStripMenuItem.Text = "Generate Pass";
             this.generatePassToolStripMenuItem.Click += new System.EventHandler(this.generatePassToolStripMenuItem_Click_1);
             // 
@@ -177,7 +181,7 @@ namespace GatePassGenerator
             this.validatePassToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("validatePassToolStripMenuItem.Image")));
             this.validatePassToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.validatePassToolStripMenuItem.Name = "validatePassToolStripMenuItem";
-            this.validatePassToolStripMenuItem.Size = new System.Drawing.Size(168, 64);
+            this.validatePassToolStripMenuItem.Size = new System.Drawing.Size(217, 64);
             this.validatePassToolStripMenuItem.Text = "Validate Pass";
             this.validatePassToolStripMenuItem.Click += new System.EventHandler(this.validatePassToolStripMenuItem_Click);
             // 
@@ -187,7 +191,7 @@ namespace GatePassGenerator
             this.filterPassToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("filterPassToolStripMenuItem.Image")));
             this.filterPassToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.filterPassToolStripMenuItem.Name = "filterPassToolStripMenuItem";
-            this.filterPassToolStripMenuItem.Size = new System.Drawing.Size(148, 64);
+            this.filterPassToolStripMenuItem.Size = new System.Drawing.Size(186, 64);
             this.filterPassToolStripMenuItem.Text = "Filter Pass";
             this.filterPassToolStripMenuItem.Click += new System.EventHandler(this.filterPassToolStripMenuItem_Click);
             // 
@@ -198,7 +202,7 @@ namespace GatePassGenerator
             this.btnLogOut.Image = ((System.Drawing.Image)(resources.GetObject("btnLogOut.Image")));
             this.btnLogOut.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(128, 64);
+            this.btnLogOut.Size = new System.Drawing.Size(160, 64);
             this.btnLogOut.Text = "LogOut";
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
@@ -208,7 +212,7 @@ namespace GatePassGenerator
             this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(105, 64);
+            this.btnExit.Size = new System.Drawing.Size(125, 64);
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -217,22 +221,30 @@ namespace GatePassGenerator
             this.labelWelcomeText.AutoSize = true;
             this.labelWelcomeText.BackColor = System.Drawing.Color.Transparent;
             this.labelWelcomeText.Font = new System.Drawing.Font("Calibri", 32.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelWelcomeText.Location = new System.Drawing.Point(767, 87);
+            this.labelWelcomeText.Location = new System.Drawing.Point(1150, 134);
+            this.labelWelcomeText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelWelcomeText.Name = "labelWelcomeText";
-            this.labelWelcomeText.Size = new System.Drawing.Size(319, 53);
+            this.labelWelcomeText.Size = new System.Drawing.Size(481, 79);
             this.labelWelcomeText.TabIndex = 1;
             this.labelWelcomeText.Text = "Welcome Admin";
             this.labelWelcomeText.Click += new System.EventHandler(this.label1_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1351, 709);
+            this.ClientSize = new System.Drawing.Size(2026, 1091);
             this.Controls.Add(this.labelWelcomeText);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Dashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
@@ -263,5 +275,6 @@ namespace GatePassGenerator
         private System.Windows.Forms.ToolStripMenuItem btnLogOut;
         private System.Windows.Forms.ToolStripMenuItem btnExit;
         private System.Windows.Forms.Label labelWelcomeText;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
     }
 }

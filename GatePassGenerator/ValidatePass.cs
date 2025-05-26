@@ -40,12 +40,12 @@ namespace GatePassGenerator
         public static bool IsDateAfterTodayOrToday(string input)
         {
             DateTime pDate;
-            if (!DateTime.TryParseExact(input, "dd-MM-yyyy hh:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out pDate))
+            if (!DateTime.TryParseExact(input, "dd.MM.yyyy HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out pDate))
             {
                 return false;
             }
 
-             return DateTime.Today <= pDate;
+            return DateTime.Today <= pDate.Date;
         }
 
         String path;
@@ -66,7 +66,7 @@ namespace GatePassGenerator
                 labelValidTo.Text = dataGridViewVisitor.Rows[e.RowIndex].Cells[9].Value.ToString();
               
 
-                if (!IsDateAfterTodayOrToday(dataGridViewVisitor.Rows[e.RowIndex].Cells[9].Value.ToString()))
+                if (IsDateAfterTodayOrToday(dataGridViewVisitor.Rows[e.RowIndex].Cells[9].Value.ToString()))
                  {
                      panel1.BackColor = Color.LightGreen;
                  }
